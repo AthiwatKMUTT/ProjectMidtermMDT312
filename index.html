@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="เว็บ Portfolio">
+    <meta name="author" content="Athiwat">
+    <meta name="keywords" content="Portfolio Athiwat">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script> 
+
+    <title>Portfolio</title>
+
+</head>
+<body>
+
+    <!-- <div class="loader-page ">
+        <div class="loader-loading">
+            <div class="loader-ring"></div>
+            <span id="loading-text">Loading...</span>
+        </div>
+    </div> -->
+
+    <section id="section-1">     
+        <nav class="navbar">
+            <img class="logo" src="Kmutt-logo.png" alt="logo">
+            <div class="namepage">Portfolio</div>
+            <ul>
+                <li><a id="Home">Home</a></li>
+                <li><a id="Project">My Project</a></li>
+                <li><a id="Assignment">My Assignment</a></li>
+            </ul>
+
+     
+                       
+            
+        </nav>
+        
+            <div id="sidebar">
+                <div class="toggle-btn" onclick="show()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">My Project</a></li>
+                    <li><a href="menu-assignment.html">My Assignment</a></li>
+                </ul>
+            </div>
+     
+
+        <div class="header-text">
+            <div id="sub-header-text">
+                <p>Welcome to My Portfolio</p>
+                <h1>Hi, I'm Pan form <span>King Mongkut’s University of Technology</span></h1>
+                <h1>Faculty of <span id="faculty-color">Media & Technology</span></h1>
+            </div> 
+            <div class="profile-top">
+                <img src="Profile-Top.png">
+            </div>
+        </div>   
+    </section>  
+
+
+    <section id="section-2">
+        <div id="about">
+            <div class="title-about">
+                <h1>About me</h1>
+                <p><span id="header-about-me">ชื่อ :</span> นาย อธิวัฒน์ นวมกระจ่าง
+                    <br><span id="header-about-me">งานอดิเรก</span> : เล่นเกม ฟังเพลง
+                    <br><span id="header-about-me">ทักษะ :</span> กราฟิกดีไซน์ ความรู้ด้านคอมพิวเตอร์
+                    <button id="showImageBtn" onclick="showImage()">แสดงรูป ผลงาน</button>
+                    <div id="imagePopup" class="popup">
+                        <div class="popup-content">
+                            <span class="close" onclick="closeImage()">&times;</span>
+                            <img src="my-work-art-g.png" id="popupImage">
+                        </div>
+                    </div>                            
+                    <br><span id="header-about-me">ความสนใจ</span><p id="in-p-in-p">ฮาร์ดแวร์ และ ซอฟต์แวร์ ด้านเทคโนโลยี คอมพิวเตอร์</p>
+                </p>
+                <br><p id="contact">Contact<br>
+                    <img src="fb-logo.png" alt="Facebook" style="width: 75px; height: 75px;" onclick="openFacebookLink()">
+                  </a></p>
+                <div id="ref-in-web">
+                    <h1>Reference source (แหล่งอ้างอิง)</h1>
+                    <p>
+                        <br><span id="header-about-me">หน้า loading page</span> : <a id="link-ref" target="_blank" href="https://www.youtube.com/watch?v=ZcXJCBe1UZU">Link</a>
+                        <br><span id="header-about-me">ทำหน้า slide ขวาบน</span> : <a id="link-ref" target="_blank" href="https://www.youtube.com/watch?v=rGAbT8ykGB0">Link</a>
+                        <br><span id="header-about-me">การใช้ Animation ใน CSS</span> : <a id="link-ref" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">Link</a>
+                        <br><span id="header-about-me">การใช้ Transition ใน CSS</span> : <a id="link-ref" target="_blank" href="https://www.w3schools.com/css/css3_transitions.asp">Link</a>
+                        <br><span id="header-about-me">การใช้ Popup รูปภาพ</span> : <a id="link-ref" target="_blank" href="https://www.youtube.com/watch?v=QghhoJBdw7A">Link</a>
+                    </p>
+                </div>
+            </div>
+            <div class="img-about">
+                <img src="Profile-Test.png">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

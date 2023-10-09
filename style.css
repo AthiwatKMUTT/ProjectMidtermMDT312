@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    background-color: #080808;
+}
+
+/* --------------------- loading page ---------------------  */
+
+.loader-page{
+    background-color: rgb(27, 27, 27);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+    animation: loading-page-hide 4s linear forwards;
+    visibility: visible;
+}
+
+@keyframes loading-page-hide{
+    80%{      
+        opacity: 1;   
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.loader-loading{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.loader-ring{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+   
+    animation: loader-ring 2s linear infinite;
+}
+@keyframes loader-ring{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 2px 5px 6px 2px rgb(255, 86, 64);
+    }
+    25%{
+        transform: rotate(90deg);
+        box-shadow: 2px 5px 6px 2px rgb(255, 180, 42);
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 2px 5px 6px 2px rgb(120, 255, 42);
+    }
+    75%{
+        transform: rotate(deg);
+        box-shadow: 2px 5px 6px 2px rgb(42, 255, 255);
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 2px 5px 6px 2px rgb(62, 40, 255);
+    } 
+}
+.loader-ring::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+}
+#loading-text{
+    color: rgb(139, 139, 139);
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+/* ------------------------ section-1 ------------------------ */
+
+#section-1{
+    width: 100%;
+    height: 100vh;
+
+}
+.logo{
+    width: 100px;
+    padding-left: 25px;
+    margin: 0.5%;
+}
+.namepage{
+    color: white;
+    font-size: 38px;
+
+    margin-right: auto;
+    margin-left: 2%;
+}
+.navbar{
+    background-color: #2D3032;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.navbar ul li{
+    display: inline-block;
+    list-style: none;  
+    margin: 25px;
+
+    position: relative;
+}
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    padding-right: 50px;  
+}
+.navbar ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: -1.5px;
+
+    transition: 0.5s;
+}
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+
+
+/* ------------- header-text -------------*/
+.header-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10%; 
+    margin-left: 2.5%;
+    font-size: 50px;
+}
+.header-text h1{
+    font-size: 40px;
+    color: white;
+}
+.header-text p{
+    color: white;
+}
+.header-text span{
+    color: rgb(255, 175, 27);
+}
+#faculty-color{
+    color: #3135ff;
+}
+#sub-header-text{
+    flex-basis: 65%
+}
+.profile-top{
+    flex-basis: 35%;
+}
+.profile-top img{
+    width: 65%;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+/* ------------- section-2 -------------*/
+#section-2{
+    width: 100vw;   
+    background-color: aliceblue;
+}
+#about{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.title-about{
+    flex-basis: 50%;
+    padding-left: 15%;
+}
+.title-about h1{
+    font-size: 50px;
+}
+.title-about p{
+    font-size: 24px;
+}
+.img-about{
+    flex-basis: 40%;
+}
+.img-about img{
+    width: 40%;
+    border-radius: 10px;
+}
+
+#header-about-me{
+    font-size: 24px;
+    color: #3135ff;
+}
+#ref-in-web{
+    margin-top: 15%;
+}
+#ref-in-web h1{
+    font-size: 32px;
+}
+#ref-in-web p{
+    font-size: 24px;
+}
+#in-p-in-p p{
+    font-size: 24px;
+}
+
+#contact {
+    font-size: 24px;
+    color: #3135ff;
+}#contact img{
+    margin-top: 20px;
+}
+#contact-link:hover{
+    color: #080808;
+}
+#link-ref {
+    color: #ff3e1c;
+    text-decoration: none;
+}
+#link-ref:hover{
+    color: rgb(41, 41, 41);
+}
+/* ------------- CSS My Project -------------*/
+.header-text-project{
+    margin-top: 2.5%; 
+    margin-left: 2.5%;
+    font-size: 50px;
+    color: white;
+
+    display: inline-block;
+}
+.text-first-in-project{
+    margin: 1% 0 2%;
+    text-indent: 5%;
+ }
+.header-text-project p{
+    font-size: 24px;
+}
+.header-text-project span{
+    color: #3135ff;
+}
+
+#project-car1 {
+    display: flex;
+    flex-direction: column; 
+
+    align-items: center; 
+}
+#project-car1 img {
+    display: block;
+    width: 35%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    margin-top: 25px;
+}
+
+
+
+/* ------------- meun-assignment -------------*/
+
+#section-1-meun-assign a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.in-meun-assign{
+    margin-top: 10%;
+}
+
+.in-meun-assign a{
+    margin: 20px;
+
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    
+    position: relative;
+}
+
+.in-meun-assign a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+
+    bottom: -1.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.5s ease-in-out;
+
+    transition: 0.5s;
+}
+.in-meun-assign a:hover::after{
+    width: 100%;
+}
+/* ------------- new menu -------------*/
+#sidebar{
+    display: none;    
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: #2D3032;
+
+    transition: right 0.3s;
+    right: -350px;
+}
+#sidebar.active{
+    right: 0;
+}
+#sidebar .toggle-btn{
+    position: absolute;
+    top: 40px;
+    right: 400px;
+}
+#sidebar ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 32px;
+    padding: 10px 0 0 25px;
+}
+
+.toggle-btn span{
+    width: 45px;
+    height: 4px;
+    background: white;
+    display: block;
+    margin-top: 8px;
+}
+
+#sidebar ul li a:hover {
+    color: red; 
+}
+
+/* ------------- media CSS -------------*/
+
+/* สำหรับ tablet */
+@media screen and (max-width: 1120px) {
+    #section-1 {
+        flex-direction: column-reverse; 
+        text-align: center;
+    }
+    .navbar ul li a{
+        display: none;
+    }
+
+    .header-text {
+        flex-grow: 0; 
+        margin-bottom: 20px; 
+    }
+    #sidebar{
+        display: block;
+        z-index: 2;
+    }
+    .profile-top{
+        flex-basis: 100%;
+    }
+    .profile-top img{
+        margin-top: 5%;
+        width: 25%;
+    }
+}
+
+/* สำหรับ mobile */
+@media screen and (max-width: 800px) {
+    .menu-bar{
+        display: block;
+    }
+    #section-1 {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .navbar ul li a{
+        display: none;
+    }
+    #about{
+        text-align: center;
+    }
+    .title-about{
+        flex-basis: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .img-about {
+        flex-basis: 100%;
+        display: block; 
+        margin-top: 100px;
+    }
+    .img-about img{
+        width: 40%;
+    }
+
+    .header-text{
+        font-size: 24px;
+    }
+    .header-text h1{
+        font-size: 16px;
+        color: white;
+    }
+    .header-text p{
+        color: white;
+    }
+    .profile-top{
+        flex-basis: 60%;
+    }
+    .profile-top img{
+        width: 65%;
+        border: 2px solid #000;
+        border-radius: 10px;
+    }
+/* -------------------------------- */
+    .title-about{
+        flex-basis: 80%;
+        padding-left: 15%;
+    }
+    .title-about h1{
+        font-size: 24px;
+    }
+    .title-about p{
+        font-size: 16px;
+    }
+    .img-about{
+        flex-basis: 100%;
+    }
+    .img-about img{
+        width: 40%;
+        border-radius: 10px;
+    }
+    #header-about-me{
+        font-size: 16px;
+        color: #3135ff;
+    }
+    #ref-in-web h1{
+        font-size: 24px;
+    }#ref-in-web p{
+        font-size: 16px;
+    }
+}
+/* ---------------------- popup image ----------------------*/
+.popup{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+  
+#popupImage{
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    max-height: 80%;
+}
+  
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.popup-content img{
+    padding-top: 10vh;
+    width: 55%;    
+}
+  
